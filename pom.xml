@@ -77,6 +77,9 @@
     <mockito.version>2.9.0</mockito.version>
     <slf4j-api.version>1.7.25</slf4j-api.version>
 
+    <osgl-version.version>2.0.0-BETA-1</osgl-version.version>
+    <osgl-ut.version>2.0.0-BETA-1</osgl-ut.version>
+
     <osgl-javadoc.css.url>https://github.com/osglworks/java-version/blob/master/src/etc/javadoc.css</osgl-javadoc.css.url>
   </properties>
 
@@ -84,12 +87,6 @@
     <system>github</system>
     <url>https://github.com/osglworks/maven-parent/issues</url>
   </issueManagement>
-
-  <parent>
-    <groupId>org.sonatype.oss</groupId>
-    <artifactId>oss-parent</artifactId>
-    <version>7</version>
-  </parent>
 
   <scm>
     <connection>scm:git:${scm.url}</connection>
@@ -102,7 +99,7 @@
     <snapshotRepository>
       <id>sonatype-nexus-snapshots</id>
       <name>Sonatype Nexus Snapshots</name>
-      <url>${sonatypeOssDistMgmtSnapshotsUrl}</url>
+      <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
     </snapshotRepository>
     <repository>
       <id>sonatype-nexus-staging</id>
@@ -285,6 +282,18 @@
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-api</artifactId>
       <version>${slf4j-api.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.osgl</groupId>
+      <artifactId>osgl-version</artifactId>
+      <version>${osgl-version.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.osgl</groupId>
+      <artifactId>osgl-ut</artifactId>
+      <version>${osgl-ut.version}</version>
     </dependency>
 
   </dependencies>
