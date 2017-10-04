@@ -59,6 +59,8 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
     <scm.url>git@github.com:osglworks/maven-parent.git</scm.url>
 
     <maven-compiler-plugin.version>3.7.0</maven-compiler-plugin.version>
@@ -168,8 +170,6 @@
         <configuration>
           <compilerId>javac-with-errorprone</compilerId>
           <forceJavacCompilerUse>true</forceJavacCompilerUse>
-          <source>7</source>
-          <target>7</target>
         </configuration>
         <dependencies>
           <dependency>
