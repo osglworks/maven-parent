@@ -1,5 +1,9 @@
 # OSGL Maven Parent CHANGELOG
 
+## 2.0.0-BETA-4
+
+* replace Cobertura with JaCoCo
+
 ## 2.0.0-BETA-3
 
 * Use 1.8 as compiler default source/target option
