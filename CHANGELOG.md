@@ -1,19 +1,22 @@
 # OSGL Maven Parent CHANGELOG
 
-## 2.0.0-BETA-4
+## 1.0.0-BETA-1 - 19/Dec/2017
+* The first version of 1.x branch - for JDK7 
+
+## 2.0.0-BETA-4 - 18/Oct/2017
 
 * replace Cobertura with JaCoCo
 
-## 2.0.0-BETA-3
+## 2.0.0-BETA-3 - 4/Oct/2017
 
 * Use 1.8 as compiler default source/target option
 * Add README and CHANGELOG files
 
-## 2.0.0-BETA-2
+## 2.0.0-BETA-2 - 4/Oct/2017
 
 * Add osgl-version and osgl-ut dependencies
 
 
-## 2.0.0-BETA-1
+## 2.0.0-BETA-1 - 3/Oct/2017
 
 * The initial version 

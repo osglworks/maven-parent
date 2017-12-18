@@ -21,7 +21,7 @@
   <groupId>org.osgl</groupId>
   <artifactId>parent</artifactId>
   <packaging>pom</packaging>
-  <version>2.0.0-BETA-5-SNAPSHOT</version>
+  <version>1.0.0-BETA-1-SNAPSHOT</version>
 
   <name>parent</name>
   <description>Parent POM.xml with commonly used pre-configured features for OSGL projects</description>
@@ -59,8 +59,8 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-    <maven.compiler.source>1.8</maven.compiler.source>
-    <maven.compiler.target>1.8</maven.compiler.target>
+    <maven.compiler.source>1.7</maven.compiler.source>
+    <maven.compiler.target>1.7</maven.compiler.target>
     <scm.url>git@github.com:osglworks/maven-parent.git</scm.url>
 
     <maven-compiler-plugin.version>3.7.0</maven-compiler-plugin.version>
@@ -70,10 +70,8 @@
 
     <buildnumber-maven-plugin.version>1.4</buildnumber-maven-plugin.version>
     <jacoco-maven-plugin.version>0.7.9</jacoco-maven-plugin.version>
-    <errorpone-core.version>2.1.1</errorpone-core.version>
     <license-maven-plugin.version>1.13</license-maven-plugin.version>
     <markdown-doclet.version>1.4</markdown-doclet.version>
-    <plexus-compiler-javac-errorprone.version>2.8.2</plexus-compiler-javac-errorprone.version>
 
     <junit.version>4.12</junit.version>
     <mockito.version>2.9.0</mockito.version>
@@ -94,7 +92,7 @@
   <scm>
     <connection>scm:git:${scm.url}</connection>
     <developerConnection>scm:git:${scm.url}</developerConnection>
-    <url>&gt;https://github.com/osglworks/maven-parent</url>
+    <url>https://github.com/osglworks/maven-parent</url>
     <tag>HEAD</tag>
   </scm>
 
@@ -167,24 +165,6 @@
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
         <version>${maven-compiler-plugin.version}</version>
-        <configuration>
-          <compilerId>javac-with-errorprone</compilerId>
-          <forceJavacCompilerUse>true</forceJavacCompilerUse>
-        </configuration>
-        <dependencies>
-          <dependency>
-            <groupId>org.codehaus.plexus</groupId>
-            <artifactId>plexus-compiler-javac-errorprone</artifactId>
-            <version>${plexus-compiler-javac-errorprone.version}</version>
-          </dependency>
-          <!-- override plexus-compiler-javac-errorprone's dependency on
-               Error Prone with the latest version -->
-          <dependency>
-            <groupId>com.google.errorprone</groupId>
-            <artifactId>error_prone_core</artifactId>
-            <version>${errorpone-core.version}</version>
-          </dependency>
-        </dependencies>
       </plugin>
       <plugin>
         <groupId>org.jacoco</groupId>
@@ -201,34 +181,6 @@
             <phase>test</phase>
             <goals>
               <goal>report</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-checkstyle-plugin</artifactId>
-        <version>2.17</version>
-        <dependencies>
-          <dependency>
-            <groupId>com.puppycrawl.tools</groupId>
-            <artifactId>checkstyle</artifactId>
-            <version>8.1</version>
-          </dependency>
-        </dependencies>
-        <configuration>
-          <failOnViolation>true</failOnViolation>
-          <configLocation>checkstyle.xml</configLocation>
-          <encoding>UTF-8</encoding>
-          <consoleOutput>true</consoleOutput>
-          <failsOnError>true</failsOnError>
-        </configuration>
-        <executions>
-          <execution>
-            <id>checkstyle</id>
-            <phase>validate</phase>
-            <goals>
-              <goal>check</goal>
             </goals>
           </execution>
         </executions>
