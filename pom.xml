@@ -413,7 +413,6 @@
             <configuration>
               <serverId>sonatype-nexus-staging</serverId>
               <nexusUrl>https://oss.sonatype.org/</nexusUrl>
-              <description>${project.version}</description>
             </configuration>
             <executions>
               <execution>
