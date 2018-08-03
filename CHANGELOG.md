@@ -1,5 +1,8 @@
 # OSGL Maven Parent CHANGELOG
 
+## 1.0.0-BETA-2 - 03/Aug/2018
+* Update osgl-version to 2.0.0-BETA-2
+
 ## 1.0.0-BETA-1 - 19/Dec/2017
 * The first version of 1.x branch - for JDK7 
 
