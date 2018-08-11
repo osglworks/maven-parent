@@ -1,5 +1,9 @@
 # OSGL Maven Parent CHANGELOG
 
+## 1.0.0-BETA-3 - 11/Aug/2018
+* update osgl-version to 2.0.0-BETA-3
+* update osgl-ut to 2.0.0-BETA-2
+
 ## 1.0.0-BETA-2 - 03/Aug/2018
 * Update osgl-version to 2.0.0-BETA-2
 
@@ -18,7 +22,6 @@
 ## 2.0.0-BETA-2 - 4/Oct/2017
 
 * Add osgl-version and osgl-ut dependencies
-
 
 ## 2.0.0-BETA-1 - 3/Oct/2017
 
