@@ -77,8 +77,8 @@
     <mockito.version>2.9.0</mockito.version>
     <slf4j-api.version>1.7.25</slf4j-api.version>
 
-    <osgl-version.version>2.0.0-BETA-4</osgl-version.version>
-    <osgl-ut.version>2.0.0-BETA-3</osgl-ut.version>
+    <osgl-version.version>2.0.0-BETA-4-JAVA7</osgl-version.version>
+    <osgl-ut.version>2.0.0-BETA-4-JAVA7</osgl-ut.version>
 
     <osgl-javadoc.css.url>https://github.com/osglworks/java-version/blob/master/src/etc/javadoc.css</osgl-javadoc.css.url>
     <sonatypeOssDistMgmtSnapshotsUrl>https://oss.sonatype.org/content/repositories/snapshots/</sonatypeOssDistMgmtSnapshotsUrl>
