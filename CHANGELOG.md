@@ -1,5 +1,10 @@
 # OSGL Maven Parent CHANGELOG
 
+## 2.0.0-BETA-4-JAVA7 30/Oct/2018
+
+* Java7 support
+
+
 ## 2.0.0-BETA-4
 
 * replace Cobertura with JaCoCo
