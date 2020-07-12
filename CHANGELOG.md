@@ -2,6 +2,8 @@
 
 ## 2.0.0-BETA-5
 
+* update checkstyle to 8.34
+* use google checkstyle
 * Update repository id
 * Support GPG 2.1
 
