@@ -1,5 +1,8 @@
 # OSGL Maven Parent CHANGELOG
 
+## 1.0.0-BETA-6 - 12/Jul/2020
+* rename snapshotRepository and respository id to `ossrh`
+
 ## 1.0.0-BETA-5 - 30/Oct/2018
 * update osgl-version to 2.0.0-BETA-4-JAVA7
 * update osgl-ut to 2.0.0-BETA-4-JAVA7
