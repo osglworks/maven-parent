@@ -203,13 +203,7 @@
             <configuration>
               <roots>
                 <root>src/main/java</root>
-                <root>src/test</root>
               </roots>
-              <excludes>
-                <exclude>**/README</exclude>
-                <exclude>src/test/resources/**</exclude>
-                <exclude>src/main/resources/**</exclude>
-              </excludes>
             </configuration>
           </execution>
         </executions>
