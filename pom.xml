@@ -379,6 +379,7 @@
             <version>${maven-javadoc-plugin.version}</version>
             <configuration>
               <stylesheetfile>src/etc/javadoc.css</stylesheetfile>
+              <source>8</source>
               <doclet>ch.raffael.mddoclet.MarkdownDoclet</doclet>
               <docletArtifact>
                 <groupId>ch.raffael.markdown-doclet</groupId>
@@ -386,9 +387,6 @@
                 <version>${markdown-doclet.version}</version>
               </docletArtifact>
               <useStandardDocletOptions>true</useStandardDocletOptions>
-              <links>
-                <link>http://junit.org/junit4/javadoc/latest/</link>
-              </links>
             </configuration>
             <executions>
               <execution>
