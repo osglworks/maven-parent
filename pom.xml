@@ -21,7 +21,7 @@
   <groupId>org.osgl</groupId>
   <artifactId>parent</artifactId>
   <packaging>pom</packaging>
-  <version>2.0.0-BETA-9</version>
+  <version>2.0.0-BETA-10-SNAPSHOT</version>
 
   <name>parent</name>
   <description>Parent POM.xml with commonly used pre-configured features for OSGL projects</description>
@@ -98,7 +98,7 @@
     <connection>scm:git:${scm.url}</connection>
     <developerConnection>scm:git:${scm.url}</developerConnection>
     <url>https://github.com/osglworks/maven-parent</url>
-    <tag>parent-2.0.0-BETA-9</tag>
+    <tag>parent-2.0.0-BETA-7</tag>
   </scm>
 
   <distributionManagement>
