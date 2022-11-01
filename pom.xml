@@ -14,7 +14,8 @@
   ~ License for the specific language governing permissions and limitations
   ~ under the License.  
   -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
   <modelVersion>4.0.0</modelVersion>
 
@@ -73,7 +74,7 @@
     <jacoco-maven-plugin.version>0.8.8</jacoco-maven-plugin.version>
     <errorpone-core.version>2.16</errorpone-core.version>
     <license-maven-plugin.version>2.0.0</license-maven-plugin.version>
-    <markdown-doclet.version>1.4</markdown-doclet.version>
+    <dokka.version>1.7.20</dokka.version>
     <plexus-compiler-javac-errorprone.version>2.12.1</plexus-compiler-javac-errorprone.version>
 
     <checkstyleVersion>10.4</checkstyleVersion>
@@ -85,8 +86,10 @@
     <osgl-version.version>2.0.0-BETA-1</osgl-version.version>
     <osgl-ut.version>2.0.0-BETA-1</osgl-ut.version>
 
-    <osgl-javadoc.css.url>https://github.com/osglworks/java-version/blob/master/src/etc/javadoc.css</osgl-javadoc.css.url>
-    <sonatypeOssDistMgmtSnapshotsUrl>https://oss.sonatype.org/content/repositories/snapshots/</sonatypeOssDistMgmtSnapshotsUrl>
+    <osgl-javadoc.css.url>https://github.com/osglworks/java-version/blob/master/src/etc/javadoc.css
+    </osgl-javadoc.css.url>
+    <sonatypeOssDistMgmtSnapshotsUrl>https://oss.sonatype.org/content/repositories/snapshots/
+    </sonatypeOssDistMgmtSnapshotsUrl>
   </properties>
 
   <issueManagement>
@@ -159,7 +162,9 @@
               <rules>
                 <requireMavenVersion>
                   <version>(,2.1.0),(2.1.0,2.2.0),(2.2.0,)</version>
-                  <message>Maven 2.1.0 and 2.2.0 produce incorrect GPG signatures and checksums respectively.</message>
+                  <message>Maven 2.1.0 and 2.2.0 produce incorrect GPG signatures and checksums
+                    respectively.
+                  </message>
                 </requireMavenVersion>
               </rules>
             </configuration>
@@ -374,35 +379,30 @@
         </pluginManagement>
         <plugins>
           <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-javadoc-plugin</artifactId>
-            <version>${maven-javadoc-plugin.version}</version>
-            <configuration>
-              <stylesheetfile>src/etc/javadoc.css</stylesheetfile>
-              <source>8</source>
-              <doclet>ch.raffael.mddoclet.MarkdownDoclet</doclet>
-              <docletArtifact>
-                <groupId>ch.raffael.markdown-doclet</groupId>
-                <artifactId>markdown-doclet</artifactId>
-                <version>${markdown-doclet.version}</version>
-              </docletArtifact>
-              <useStandardDocletOptions>true</useStandardDocletOptions>
-            </configuration>
+            <groupId>org.jetbrains.dokka</groupId>
+            <artifactId>dokka-maven-plugin</artifactId>
+            <version>${dokka.version}</version>
             <executions>
               <execution>
                 <id>gen-javadoc</id>
                 <phase>prepare-package</phase>
                 <goals>
+                  <goal>dokka</goal>
                   <goal>javadoc</goal>
                 </goals>
               </execution>
               <execution>
                 <id>attach-javadocs</id>
                 <goals>
-                  <goal>jar</goal>
+                  <goal>javadocJar</goal>
                 </goals>
               </execution>
             </executions>
+            <configuration>
+              <includes>
+                <file>packages.md</file>
+              </includes>
+            </configuration>
           </plugin>
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
